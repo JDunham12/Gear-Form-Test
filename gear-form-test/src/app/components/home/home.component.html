@@ -1,0 +1,5 @@
+<mat-grid-list cols="2" rowHeight="1:1">
+  <mat-grid-tile *ngFor="let input of gearInputList">
+    <app-gear-card [title]="input.title"></app-gear-card>
+  </mat-grid-tile>
+</mat-grid-list>

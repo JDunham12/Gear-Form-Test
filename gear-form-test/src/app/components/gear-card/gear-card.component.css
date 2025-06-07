@@ -1,0 +1,17 @@
+
+/* styles.css or component's styles */
+.form-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-card-title {
+  text-align: center;
+}

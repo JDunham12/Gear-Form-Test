@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="tripForm" class="form-column">
+      <mat-form-field appearance="outline">
+        <mat-label for="date">Trip Date</mat-label>
+        <input matInput formControlName="date" [matDatepicker]="picker" (click)="picker.open()">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="bike">Bike </mat-label>
+        <mat-select formControlName="bike">
+          @for (bike of bikeList; track bike) {
+            <mat-option [value]="bike">{{bike}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="mileage">Trip Mileage</mat-label>
+        <input matInput type="number" formControlName="mileage">
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+</mat-card>
+
